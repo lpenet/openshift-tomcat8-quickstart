@@ -20,7 +20,7 @@ else
 
 	# Apache Tomcat installation
     cd $OPENSHIFT_DATA_DIR
-    wget http://apache.claz.org/tomcat/tomcat-8/v8.5.11/bin/apache-tomcat-$OPENSHIFT_TOMCAT85_VERSION.tar.gz
+    wget http://apache.claz.org/tomcat/tomcat-8/v$OPENSHIFT_TOMCAT85_VERSION/bin/apache-tomcat-$OPENSHIFT_TOMCAT85_VERSION.tar.gz
     tar xzvf apache-tomcat-$OPENSHIFT_TOMCAT85_VERSION.tar.gz
     TOMCAT_HOME=$OPENSHIFT_DATA_DIR/apache-tomcat-$OPENSHIFT_TOMCAT85_VERSION
     export TOMCAT_HOME
