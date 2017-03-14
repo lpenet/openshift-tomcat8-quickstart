@@ -1,4 +1,4 @@
 #!/bin/bash
 
-$OPENSHIFT_DATA_DIR/apache-tomcat-$OPENSHIFT_TOMCAT85_VERSION/bin/shutdown.sh
+$OPENSHIFT_DATA_DIR/apache-tomcat-8.5.12/bin/shutdown.sh
 exit 0

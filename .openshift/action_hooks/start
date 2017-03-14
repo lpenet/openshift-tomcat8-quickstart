@@ -2,14 +2,14 @@
 set -x
 cd $OPENSHIFT_DATA_DIR
 
-if [ -d $OPENSHIFT_DATA_DIR/apache-tomcat-$OPENSHIFT_TOMCAT85_VERSION ]
+if [ -d $OPENSHIFT_DATA_DIR/apache-tomcat-8.5.12 ]
 then
     # Java 1.8 set env
     export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
     export PATH=$JAVA_HOME/bin:$PATH
 
 
-	cd apache-tomcat-$OPENSHIFT_TOMCAT85_VERSION/bin
+	cd apache-tomcat-8.5.12/bin
 	./startup.sh
     exit 0
 else
@@ -20,9 +20,9 @@ else
 
 	# Apache Tomcat installation
     cd $OPENSHIFT_DATA_DIR
-    wget http://apache.claz.org/tomcat/tomcat-8/v$OPENSHIFT_TOMCAT85_VERSION/bin/apache-tomcat-$OPENSHIFT_TOMCAT85_VERSION.tar.gz
-    tar xzvf apache-tomcat-$OPENSHIFT_TOMCAT85_VERSION.tar.gz
-    TOMCAT_HOME=$OPENSHIFT_DATA_DIR/apache-tomcat-$OPENSHIFT_TOMCAT85_VERSION
+    wget http://apache.claz.org/tomcat/tomcat-8/v8.5.12/bin/apache-tomcat-8.5.12.tar.gz
+    tar xzvf apache-tomcat-8.5.12.tar.gz
+    TOMCAT_HOME=$OPENSHIFT_DATA_DIR/apache-tomcat-8.5.12
     export TOMCAT_HOME
 
 	# configure tomcat
